@@ -7,7 +7,7 @@
   (title_block
     (title "RP Micro")
     (rev "1.0")
-    (comment 1 "CC BY-SA 4.0 (Open source hardware)")
+    (comment 1 "CERN Open Hardware Licence Version 2 - Strongly Reciprocal")
   )
 
   (lib_symbols
