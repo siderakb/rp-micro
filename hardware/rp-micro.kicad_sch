@@ -1565,7 +1565,6 @@
     )
   )
 
-
   (junction (at 64.77 172.72) (diameter 0) (color 0 0 0 0)
     (uuid 0f158b0a-1869-402e-ba76-916799256097)
   )
@@ -3904,7 +3903,7 @@
     (property "MFR. Part #" "CL05A105KA5NQNC" (id 5) (at 53.34 153.67 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Note" "${REFERENCE} close to pin 45 (VREG_OUT)" (id 6) (at 74.93 153.67 0))
+    (property "Note" "${REFERENCE} close to pin 45 (VREG_VOUT)" (id 6) (at 74.93 153.67 0))
     (pin "1" (uuid 90bcb2c5-55e6-4396-8fc9-766cbe6aed4c))
     (pin "2" (uuid 08346976-622f-466e-9406-771784aa99eb))
   )
