@@ -9,7 +9,7 @@
     (title "RP Micro")
     (date "2022-11-07")
     (rev "1.0")
-    (comment 1 "CERN Open Hardware Licence Version 2 - Strongly Reciprocal")
+    (comment 1 "MIT License (Open source hardware)")
   )
 
   (layers
