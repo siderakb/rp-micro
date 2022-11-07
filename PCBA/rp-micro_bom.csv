@@ -15,6 +15,6 @@ Comment,Designator,Footprint,JLCPCB Part #
 "BOOT","SW1","Button_Switch_SMD:SW_SPST_B3U-1000P","C231329"
 "RESET","SW2","Button_Switch_SMD:SW_SPST_B3U-1000P","C231329"
 "RT9013-33GB","U1","Package_TO_SOT_SMD:SOT-23-5","C47773"
-"W25Q16JVUXIQ","U2","rp-micro:USON-8 (2x3mm)","C2843335"
+"W25Q64JVXGIQ","U2","rp-micro:XSON-8 (4x4mm)","C2940195"
 "RP2040","U3","Package_DFN_QFN:QFN-56-1EP_7x7mm_P0.4mm_EP3.2x3.2mm","C2040"
 "12MHz","Y1","Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm","C9002"
