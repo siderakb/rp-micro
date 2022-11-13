@@ -2,14 +2,17 @@
 
 ![render](https://imgur.com/WovWqdM.png)
 
-*PR Micro* is a Pro Micro compatible RP2040 board, inspired by the [plut0nium/0xB2](https://github.com/plut0nium/0xB2) and [joshajohnson/sea-picro](https://github.com/joshajohnson/sea-picro).
+*PR Micro* is a Pro Micro compatible RP2040 board with USB Type-C, inspired by the [plut0nium/0xB2](https://github.com/plut0nium/0xB2) and [joshajohnson/sea-picro](https://github.com/joshajohnson/sea-picro).
 
 Go to [Releases](https://github.com/ziteh/rp-micro/releases) for Gerber, schematic and PCBA files.
 
-## Pinouts
+## Pinout
 
-![pinouts](https://imgur.com/9tYfddi.png)
-- State LED (Blue): GP25
+![pinout](https://imgur.com/WUcAfGC.png)
+
+- RAW: LDO regulator VIN pin.
+- Blue LED (top right): State/User LED (Connect to GP25).
+- Red LED (top left): 3.3V power indicator.
 
 ## BOM
 
@@ -42,7 +45,7 @@ There is not designator silkscreen on PCB, please ues the [`bom/ibom.html`](./bo
 
 |                   Top                   |                   Bottom                   |                   Layers                   |
 | :-------------------------------------: | :----------------------------------------: | :----------------------------------------: |
-| ![top](https://i.imgur.com/zZ0oFAu.jpg) | ![bottom](https://i.imgur.com/8XgDX9x.jpg) | ![layers](https://i.imgur.com/5UMG5ty.jpg) |
+| ![top](https://imgur.com/Z74vmrD.jpg) | ![bottom](https://imgur.com/x0gahDK.jpg) | ![layers](https://i.imgur.com/5UMG5ty.jpg) |
 
 
 ## PCBA
