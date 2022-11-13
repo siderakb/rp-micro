@@ -52,6 +52,8 @@ There is not designator silkscreen on PCB, please ues the [`bom/ibom.html`](./bo
 
 The BOM and CPL files for PCBA are placed in the [`PCBA`](./PCBA/) folder and [Releases](https://github.com/ziteh/rp-micro/releases) page.
 
+[BOM generator scritp](https://gist.github.com/ziteh/e79bc244e6f5e5383c074971265d7da6)
+
 ## Board Characteristics
 
 - Copper layer count: 2
