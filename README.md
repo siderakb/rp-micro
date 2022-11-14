@@ -13,7 +13,7 @@ Go to [Releases](https://github.com/ziteh/rp-micro/releases) for Gerber, schemat
 - RAW: LDO regulator VIN pin.
 - Blue LED (top right): State/User LED (Connect to GP25).
 - Red LED (top left): 3.3V power indicator.
-- All the GPIO pins of RP2040 can be used as PMW output.
+- All the GPIO pins of RP2040 can be used as PWM output.
 
 In fact, the RP2040 GPIO pin functions is very flexible, the above pinout figure is a simplified version,  
 please refer to the [datasheet](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf) section '*1.4.3. GPIO Functions*' for detailed.
