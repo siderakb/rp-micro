@@ -13,29 +13,33 @@ Go to [Releases](https://github.com/ziteh/rp-micro/releases) for Gerber, schemat
 - RAW: LDO regulator VIN pin.
 - Blue LED (top right): State/User LED (Connect to GP25).
 - Red LED (top left): 3.3V power indicator.
+- All the GPIO pins of RP2040 can be used as PMW output.
+
+In fact, the RP2040 GPIO pin functions is very flexible, the above pinout figure is a simplified version,  
+please refer to the [datasheet](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf) section '*1.4.3. GPIO Functions*' for detailed.
 
 ## BOM
 
-| Designator                          | Value                   | Footprint                           |
-| ----------------------------------- | ----------------------- | ----------------------------------- |
-| C1,C2,C8,C16                        | 1uF                     | 0402 (1005 Metric)                  |
-| C3,C6,C7,C9,C10,C11,C12,C13,C14,C15 | 0.1uF                   | 0402 (1005 Metric)                  |
-| C4,C5                               | 20pF                    | 0402 (1005 Metric)                  |
-| D1                                  | B5817                   | SOD-323                             |
-| F1                                  | 500mA, 6V               | 0805 (2012 Metric)                  |
-| J1                                  | USB-C Receptacle USB2.0 | USB-C Receptacle HRO TYPE-C-31-M-12 |
-| LD1                                 | RED                     | 0603 (1608 Metric)                  |
-| LD2                                 | BLUE                    | 0603 (1608 Metric)                  |
-| R1,R2                               | 5.1k                    | 0402 (1005 Metric)                  |
-| R3,R10                              | 330                     | 0402 (1005 Metric)                  |
-| R4,R5                               | 27                      | 0402 (1005 Metric)                  |
-| R6,R9                               | 10k                     | 0402 (1005 Metric)                  |
-| R7,R8                               | 1k                      | 0402 (1005 Metric)                  |
-| SW1,SW2                             | BOOT and RESET button   | B3U-1000P                           |
-| U1                                  | RT9013-33GB             | SOT-23-5                            |
-| U2                                  | W25Q64JVXGIQ            | XSON-8 (4x4mm)                      |
-| U3                                  | RP2040                  | QFN-56-1EP 7x7mm P0.4mm EP3.2x3.2mm |
-| Y1                                  | 12MHz                   | 3225-4Pin (3.2x2.5mm)               |
+| Designator          | Value                   | Footprint                           | Description                                       |
+| ------------------- | ----------------------- | ----------------------------------- | ------------------------------------------------- |
+| C1, C2, C8, C16     | 1uF                     | 0402 (1005 Metric)                  | LDO input/output and RP2040 decoupling capacitors |
+| C3, C6, C7, C9\~C15 | 0.1uF                   | 0402 (1005 Metric)                  | Flash and RP2040 decoupling capacitors            |
+| C4, C5              | 20pF                    | 0402 (1005 Metric)                  | Crystal load capacitors                           |
+| D1                  | B5817                   | SOD-323                             | USB VBUS diode                                    |
+| F1                  | 500mA, 6V               | 0805 (2012 Metric)                  | USB VBUS fuse                                     |
+| J1                  | USB-C Receptacle USB2.0 | USB-C Receptacle HRO TYPE-C-31-M-12 | USB Type-C connector                              |
+| LD1                 | RED                     | 0603 (1608 Metric)                  | 3.3V power indicator                              |
+| LD2                 | BLUE                    | 0603 (1608 Metric)                  | State/User LED                                    |
+| R1, R2              | 5.1k                    | 0402 (1005 Metric)                  | USB Type-C CC resistors                           |
+| R3, R10             | 330                     | 0402 (1005 Metric)                  | LED series resistors                              |
+| R4, R5              | 27                      | 0402 (1005 Metric)                  | RP2040 USB D+/- series termination resistors      |
+| R6, R9              | 10k                     | 0402 (1005 Metric)                  |                                                   |
+| R7, R8              | 1k                      | 0402 (1005 Metric)                  |                                                   |
+| SW1, SW2            | BOOT and RESET buttons  | B3U-1000P                           | BOOT and RESET buttons                            |
+| U1                  | RT9013-33GB             | SOT-23-5                            | 3.3V/500mA output LDO regulator                   |
+| U2                  | W25Q64JVXGIQ            | XSON-8 (4x4mm)                      | 8MB flash                                         |
+| U3                  | RP2040                  | QFN-56-1EP 7x7mm P0.4mm EP3.2x3.2mm | MCU                                               |
+| Y1                  | 12MHz                   | 3225-4Pin (3.2x2.5mm)               | Crystal for RP2040                                |
 
 There is not designator silkscreen on PCB, please ues the [`bom/ibom.html`](./bom/ibom.html) to refer to the placement of the parts, it is generated by [Interactive HTML BOM](https://github.com/openscopeproject/InteractiveHtmlBom) plugin. 
 
@@ -45,7 +49,7 @@ There is not designator silkscreen on PCB, please ues the [`bom/ibom.html`](./bo
 
 |                   Top                   |                   Bottom                   |                   Layers                   |
 | :-------------------------------------: | :----------------------------------------: | :----------------------------------------: |
-| ![top](https://imgur.com/Z74vmrD.jpg) | ![bottom](https://imgur.com/x0gahDK.jpg) | ![layers](https://i.imgur.com/5UMG5ty.jpg) |
+| ![top](https://imgur.com/Z74vmrD.jpg)   | ![bottom](https://imgur.com/x0gahDK.jpg)   | ![layers](https://i.imgur.com/5UMG5ty.jpg) |
 
 
 ## PCBA
