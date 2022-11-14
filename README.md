@@ -8,7 +8,7 @@ Go to [Releases](https://github.com/ziteh/rp-micro/releases) for Gerber, schemat
 
 ## Pinout
 
-![pinout](https://imgur.com/LGbTvPh.png)
+![pinout](https://imgur.com/qrDTd9H.png)
 
 - RAW: LDO regulator VIN pin.
 - Blue LED (top right): State/User LED (Connect to GP25).
