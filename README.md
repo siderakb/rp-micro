@@ -6,6 +6,8 @@
 
 Go to [Releases](https://github.com/ziteh/rp-micro/releases) for Gerber, schematic and PCBA files.
 
+> A part of [ErgoSNM keyboard](https://github.com/ziteh/ergo-snm-keyboard).
+
 ## Pinout
 
 ![pinout](https://imgur.com/qrDTd9H.png)
@@ -67,3 +69,11 @@ The BOM and CPL files for PCBA are placed in the [`PCBA`](./PCBA/) folder and [R
 - Castellated pads: No
 - Edge card connectors: No
 - Plated board edge: No
+
+## Disclaimer
+
+These files are provided **AS IS**, without warranty of any kind, express or implied.  
+Including but not limited to manufacturing, assembly, procurement and use at your own risk.  
+It is recommended to check yourself before use.
+
+For the full statement, please see [LICENSE](./LICENSE).
