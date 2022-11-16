@@ -12,6 +12,7 @@ Go to [Releases](https://github.com/ziteh/rp-micro/releases) for Gerber, schemat
 
 ![pinout](https://imgur.com/qrDTd9H.png)
 
+- [SparkFun Pro Micro - RP2040](https://www.sparkfun.com/products/18288) compatible pinout, with additional 5 pins ([Elite-C](https://deskthority.net/wiki/Elite-C) style, but the pinout not identical to [Elite-Pi](https://docs.keeb.io/elite-pi-guide)).
 - RAW: LDO regulator VIN pin.
 - Blue LED (top right): State/User LED (Connect to GP25).
 - Red LED (top left): 3.3V power indicator.
