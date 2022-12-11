@@ -6,7 +6,7 @@
 
 Go to [Releases](https://github.com/ziteh/rp-micro/releases) for Gerber, schematic and PCBA files.
 
-> A part of [ErgoSNM keyboard](https://github.com/ziteh/ergo-snm-keyboard).
+> A part of [ErgoSNM keyboard](https://github.com/ziteh/ergo-snm-keyboard) project.
 
 ## Pinout
 
