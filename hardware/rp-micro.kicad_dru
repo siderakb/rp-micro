@@ -81,7 +81,7 @@
     (condition "A.Type =='Via'"))
 
 (rule "Min annular ring PTH"
-    (constraint annular_width (min 0.3mm))
+    (constraint annular_width (min 0.13mm))
     (condition "A.Pad_Type == 'Through-hole'"))
 
 # For V-Cut line min clearance >= 0.4mm
