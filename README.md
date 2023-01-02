@@ -4,8 +4,6 @@
 
 *PR Micro* is a Pro Micro compatible RP2040 board with USB Type-C and 8MB flash, inspired by the [plut0nium/0xB2](https://github.com/plut0nium/0xB2), [joshajohnson/sea-picro](https://github.com/joshajohnson/sea-picro) and [Elite-Pi](https://docs.keeb.io/elite-pi-guide), specialized design for keyboards.
 
-[Demo video](https://youtu.be/CSA7Ih7nAls)
-
 Go to [Releases](https://github.com/ziteh/rp-micro/releases) for Gerber, schematic and PCBA files.
 
 > A part of [ErgoSNM keyboard](https://github.com/ziteh/ergo-snm-keyboard) project.
