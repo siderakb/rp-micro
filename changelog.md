@@ -1,6 +1,6 @@
 # Changelog
 
-## [Unreleased]
+## [1.1.0] 2023-01-02
 ### Added
 - Solder bridges SB1 and SB2 added. This allows the user to select whether pins 3 and 4 of the left pin header are GND or GPIO10 and 11 respectively.
 
