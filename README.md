@@ -1,8 +1,8 @@
 # RP Micro
 
-![render](https://imgur.com/WovWqdM.png)
+![](https://i.imgur.com/sVGqRyk.jpg)
 
-*PR Micro* is a Pro Micro compatible RP2040 board with USB Type-C, inspired by the [plut0nium/0xB2](https://github.com/plut0nium/0xB2) and [joshajohnson/sea-picro](https://github.com/joshajohnson/sea-picro).
+*PR Micro* is a Pro Micro compatible RP2040 board with USB Type-C and 8MB flash, inspired by the [plut0nium/0xB2](https://github.com/plut0nium/0xB2), [joshajohnson/sea-picro](https://github.com/joshajohnson/sea-picro) and [Elite-Pi](https://docs.keeb.io/elite-pi-guide), specialized design for keyboards.
 
 [Demo video](https://youtu.be/CSA7Ih7nAls)
 
@@ -12,39 +12,35 @@ Go to [Releases](https://github.com/ziteh/rp-micro/releases) for Gerber, schemat
 
 ## Pinout
 
-![pinout](https://imgur.com/qrDTd9H.png)
+![pinout](https://i.imgur.com/871myU2.png)
 
-- [SparkFun Pro Micro - RP2040](https://www.sparkfun.com/products/18288) compatible pinout, with additional 5 pins ([Elite-C](https://deskthority.net/wiki/Elite-C) style, but the pinout not identical to [Elite-Pi](https://docs.keeb.io/elite-pi-guide)).
+- [SparkFun Pro Micro - RP2040](https://www.sparkfun.com/products/18288) compatible pinout, with additional 5+2 pins (Elite-C and Elite-Pi style, but the pinout not identical to Elite-Pi).
 - RAW: LDO regulator VIN pin.
-- Blue LED (top right): State/User LED (Connect to GP25).
-- Red LED (top left): 3.3V power indicator.
+- Blue LED `LD1`: State/User LED (Connect to GP25).
 - All the GPIO pins of RP2040 can be used as PWM output.
+- Select whether the 3rd and 4th pads in the left row are GND or GP10/GP11 by using solder bridge jumper `SB1` and `SB2`, the default is GND. To access GP10 or GP11, you need to cut the connection between the solder bridge and GND pad, and then connect the GPIO pads with solder. Great idea from Elite-Pi.
 
-In fact, the RP2040 GPIO pin functions is very flexible, the above pinout figure is a simplified version,  
-please refer to the [RP2040 datasheet](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf) "*1.4.3. GPIO Functions*" section for details.
+In fact, the RP2040 GPIO pin functions is very flexible, the above pinout figure is a simplified version, please refer to the [RP2040 datasheet](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf) "*1.4.3. GPIO Functions*" section for details.
 
 ## BOM
-
-| Designator          | Value                   | Footprint                           | Description                                       |
-| ------------------- | ----------------------- | ----------------------------------- | ------------------------------------------------- |
-| C1, C2, C8, C16     | 1uF                     | 0402 (1005 Metric)                  | LDO input/output and RP2040 decoupling capacitors |
-| C3, C6, C7, C9\~C15 | 0.1uF                   | 0402 (1005 Metric)                  | Flash and RP2040 decoupling capacitors            |
-| C4, C5              | 20pF                    | 0402 (1005 Metric)                  | Crystal load capacitors                           |
-| D1                  | B5817                   | SOD-323                             | USB VBUS diode                                    |
-| F1                  | 500mA, 6V               | 0805 (2012 Metric)                  | USB VBUS fuse                                     |
-| J1                  | USB-C Receptacle USB2.0 | USB-C Receptacle HRO TYPE-C-31-M-12 | USB Type-C connector                              |
-| LD1                 | RED                     | 0603 (1608 Metric)                  | 3.3V power indicator                              |
-| LD2                 | BLUE                    | 0603 (1608 Metric)                  | State/User LED                                    |
-| R1, R2              | 5.1k                    | 0402 (1005 Metric)                  | USB Type-C CC resistors                           |
-| R3, R10             | 330                     | 0402 (1005 Metric)                  | LED series resistors                              |
-| R4, R5              | 27                      | 0402 (1005 Metric)                  | RP2040 USB D+/- series termination resistors      |
-| R6, R9              | 10k                     | 0402 (1005 Metric)                  |                                                   |
-| R7, R8              | 1k                      | 0402 (1005 Metric)                  |                                                   |
-| SW1, SW2            | BOOT and RESET buttons  | B3U-1000P                           | BOOT and RESET buttons                            |
-| U1                  | RT9013-33GB             | SOT-23-5                            | 3.3V/500mA output LDO regulator                   |
-| U2                  | W25Q64JVXGIQ            | XSON-8 (4x4mm)                      | 8MB flash                                         |
-| U3                  | RP2040                  | QFN-56-1EP 7x7mm P0.4mm EP3.2x3.2mm | MCU                                               |
-| Y1                  | 12MHz                   | 3225-4Pin (3.2x2.5mm)               | Crystal for RP2040                                |
+| Designator                        | Value                          | Footprint                           | Description                                       |
+| --------------------------------- | ------------------------------ | ----------------------------------- | ------------------------------------------------- |
+| R1,R2                             | 27                             | 0402 (1005 Metric)                  | RP2040 USB D+/- series termination resistors      |
+| R3,R4,R9                          | 1k                             | 0402 (1005 Metric)                  |                                                   |
+| R5,R8                             | 10k                            | 0402 (1005 Metric)                  |                                                   |
+| R6,R7                             | 5.1k                           | 0402 (1005 Metric)                  | USB Type-C CC resistors                           |
+| C1,C2,C5,C6,C8,C9,C10,C11,C12,C15 | 100nF                          | 0402 (1005 Metric)                  | Flash and RP2040 decoupling capacitors            |
+| C3,C4                             | 20pF                           | 0402 (1005 Metric)                  | Crystal load capacitors                           |
+| C7,C13,C14,C16                    | 1uF                            | 0402 (1005 Metric)                  | LDO input/output and RP2040 decoupling capacitors |
+| LD1                               | BLUE                           | 0603 (1608 Metric)                  | State/User LED                                    |
+| D1                                | B5817                          | SOD-323                             | USB VBUS diode                                    |
+| F1                                | 500mA, 6V                      | 0805 (2012 Metric)                  | USB VBUS fuse                                     |
+| J1                                | USB-C Mid-Mount Receptacle 16P | 918-418K2024S40000                  | USB Type-C connector                              |
+| SW1,SW2                           | BOOT and RESET buttons         | B3U-1000P                           | Buttons                                           |
+| U1                                | RP2040                         | QFN-56-1EP 7x7mm P0.4mm EP3.2x3.2mm | MCU                                               |
+| U2                                | W25Q64JVXGIQ                   | XSON-8 (4x4mm)                      | 8MB (64Mbit) flash                                |
+| U3                                | RT9013-33GB                    | SOT-23-5                            | 3.3V/500mA LDO regulator                          |
+| Y1                                | 12MHz                          | 3225-4Pin (3.2x2.5mm)               | Crystal for RE2040                                |
 
 There is not designator silkscreen on PCB, please use your browser to open the `ibom.html` file (placed in [Release page](https://github.com/ziteh/rp-micro/releases) and [`bom/ibom.html`](./bom/ibom.html)) to refer to the placement of the parts, it is generated by [Interactive HTML BOM](https://github.com/openscopeproject/InteractiveHtmlBom) plugin. 
 
@@ -54,14 +50,12 @@ There is not designator silkscreen on PCB, please use your browser to open the `
 
 |                   Top                   |                   Bottom                   |                   Layers                   |
 | :-------------------------------------: | :----------------------------------------: | :----------------------------------------: |
-| ![top](https://imgur.com/Z74vmrD.jpg)   | ![bottom](https://imgur.com/x0gahDK.jpg)   | ![layers](https://i.imgur.com/5UMG5ty.jpg) |
+| ![top](https://i.imgur.com/2enqVDR.png) | ![bottom](https://i.imgur.com/HTMohGL.png) | ![layers](https://i.imgur.com/VAw90Cm.jpg) |
 
 
 ## PCBA
 
-The BOM and CPL files for PCBA are placed in the [`PCBA`](./PCBA/) folder and [Releases](https://github.com/ziteh/rp-micro/releases) page.
-
-[BOM generator scritp](https://gist.github.com/ziteh/e79bc244e6f5e5383c074971265d7da6)
+Support JLCPCB's PCBA service, the BOM and CPL files for PCBA are placed in the [`PCBA`](./PCBA/) folder and [Releases](https://github.com/ziteh/rp-micro/releases) page. Generated by [KiCad JLCPCB Tools](https://github.com/Bouni/kicad-jlcpcb-tools) plugin.
 
 ## Board Characteristics
 
