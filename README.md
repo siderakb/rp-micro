@@ -16,7 +16,7 @@ Go to [Releases](https://github.com/ziteh/rp-micro/releases) for Gerber, schemat
 - RAW: LDO regulator VIN pin.
 - Blue LED `LD1`: State/User LED (Connect to GP25).
 - All the GPIO pins of RP2040 can be used as PWM output.
-- Select whether the 3rd and 4th pads in the left row are GND or GP10/GP11 by using solder bridge jumper `SB1` and `SB2`, the default is GND. To access GP10 or GP11, you need to cut the connection between the solder bridge and GND pad, and then connect the GPIO pads with solder. Great idea from Elite-Pi.
+- Select whether the 3rd and 4th pads in the left column are GND or GP10/GP11 by using solder bridge jumper `SB1` and `SB2`, the default is GND. To access GP10 or GP11, you need to cut the connection between the solder bridge and GND pad, and then connect the GPIO pads with solder. Great idea from Elite-Pi.
 
 In fact, the RP2040 GPIO pin functions is very flexible, the above pinout figure is a simplified version, please refer to the [RP2040 datasheet](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf) "*1.4.3. GPIO Functions*" section for details.
 
